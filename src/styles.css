@@ -4,101 +4,111 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   color: #5a5a5a;
 }
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
+#scroll-animate
+{
+  overflow: hidden;
 }
 
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
-}
-
-.carousel-item>img {
-  position: absolute;
-  top: 0;
+#scroll-animate-main
+{
+  width: 100%;
   left: 0;
-  min-width: 100%;
-  height: 32rem;
+  position: fixed;
 }
 
-/* MARKETING CONTENT
--------------------------------------------------- */
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
+#heightPage,
+#heightScroll
+{
+  width: 10px;
+  top: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+#heightPage
+{
+  left: 0;
+}
+
+#heightScroll
+{
+  right: 0;
+}
+
+header
+{
+  width: 100%;
+  height: 100%;
+  background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50%;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+footer
+{
+  width: 100%;
+  height: 300px;
+  background: gray;
+  bottom: -300px;
+  position: fixed;
+  z-index: -1;
+}
+
+.content
+{
+  height: 1000px;
+  min-height: 1000px;
+  background: #ededed;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper-parallax {
+  margin-top: 100%;
+  margin-bottom: 300px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
   text-align: center;
+  font-family: Helvetica;
+  font-size: 150px;
+  color: #fff;
 }
 
-.marketing h2 {
-  font-weight: 400;
+header h1{}
+
+.content h1{
+  line-height: 1000px;
+  color: #999;
 }
 
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+footer h1
+{
+  line-height: 300px;
 }
 
-/* Featurettes
-------------------------- */
-.featurette-divider {
-  margin: 5rem 0;
-  /* Space out the Bootstrap <hr> more */
-}
+header,
+footer,
+#scroll-animate-main
+{
+  -webkit-transition-property: all;
+     -moz-transition-property: all;
+      transition-property: all;
 
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
-}
+  -webkit-transition-duration: 0.4s;
+     -moz-transition-duration: 0.4s;
+      transition-duration: 0.4s;
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
-@media (min-width: 40em) {
-
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
-
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
-}
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+     -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+      transition-timing-function: cubic-bezier(0, 0, 0, 1);
 }
