@@ -14,11 +14,6 @@ export class ContentfulService {
   });
 
   constructor() {
-    // this.client.sync({initial: true})
-    //  .then((res) => {
-    //  console.log(res.entries);
-    //  console.log(res.assets);
-    // })
    }
 
 getAll() {
